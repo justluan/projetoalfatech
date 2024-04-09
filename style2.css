@@ -27,8 +27,8 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0;
-
+    padding: 30px 10px;
+    flex-wrap: wrap;
     
     & .logo {
         display: flex;
@@ -130,7 +130,7 @@ h2 {
     background-color: #2f86d6;
     padding: 80px 0;
 
-    & .logocontato {
+    & .contatos {
         display: flex;
         justify-content: center;
         gap: 15px;
@@ -166,3 +166,102 @@ h2 {
     span {
         color: #2f86d6;
     }
+
+
+    /* Media query para dispositivos com largura de tela entre 601px e 900px */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    ::-webkit-scrollbar {
+        width: 1;
+    }
+
+
+.background1 {
+    & .topo {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+
+        & .topoinfos {
+            font-size: 12px;
+            flex: 1 1 50px;
+            gap: 10px;
+            padding: 10px 0px;
+            text-align: center;
+        }
+
+        & .logocontato img {
+            width: 80px;
+        }
+
+        & .logo {
+            gap: 10px;
+        }
+    
+        & .namelogo {
+            font-size: 15px;
+        }
+        
+}
+}
+
+.tabela2 {
+    width: 97vw;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+
+    & tbody, td, th, tr, .cabeçalho {
+        padding: 2px;
+        font-size: 8px;
+        line-height: 15px;
+
+        & h3 {
+            font-size: 15px;
+        }
+        
+        & p {
+            font-size: 8px;
+        }
+
+        & .first {
+            font-size: 10px;
+        }
+
+        & .bolinha {
+            width: 8px;
+            height: 8px;
+        }
+    }
+}
+
+.background3  {
+    & .textob3 {
+        padding-top: 20px;
+        font-size: 12px;
+    }
+
+    & .logocontato {
+        gap: 5px;
+    }
+
+    & .bannertexto {
+        font-size: 15px;
+    }
+
+    & .logocontato img {
+        width: 80px;
+    }
+
+}
+
+footer {
+    font-size: 12px;
+}
+
+}
