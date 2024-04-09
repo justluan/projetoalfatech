@@ -5,10 +5,6 @@
     box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-    width: 0;
-}
-
 h2 {
     font-size: 30px;
 }
@@ -23,11 +19,15 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0;
+    padding: 30px 10px;
+    flex-wrap: wrap;
+
     
     & .logo {
         display: flex;
         gap: 20px;
+        align-items: center;
+        justify-content: space-between;
     }
 
     & p {
@@ -40,10 +40,13 @@ h2 {
 
     & .topoinfos {
         margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 20px;
         
         & a {
             text-decoration: none;
-            padding: 15px;
             font-weight: bold;
             color: black;
         }
@@ -53,21 +56,36 @@ h2 {
 .background2 {
     width: 100%;
     background-color: #2f86d6;
+    padding: 90px 0;
 
     &  .banner {
+        max-width: 1024px;
         width: 100%;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        margin: 0 auto;
         color: white;
         letter-spacing: 1px;
-        padding: 90px 0;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
 }
 
-    & h2 {
-        padding: 15px 0;
-        font-weight: bold;
-        font-size: 30px;
+    & .bannertext {
+        padding: 10px 20px;
+        flex: 1 1 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    & .bannerimage {
+        flex: 1 1 468px;
+
+    }
+
+    & .bannerimage img {
+        width: 100%;
+        height: 100%;
     }
 
 }
@@ -77,14 +95,22 @@ h2 {
     color: white;
     margin: 0;
 
-    .firstad {
+    & .firstad {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
         padding: 30px 0;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    & .firstadinfo {
+        align-items: center;
+        padding: 0px 20px;
     }
 
     .firstadimage {
+        
 
         & a {
             text-decoration: none;
@@ -145,7 +171,9 @@ h2 {
     margin: 0;
     background-color: #f1f3f7;
     text-align: center;
-    padding: 100px;
+    padding: 100px 0px;
+
+
 
     & h2 {
         padding-bottom: 60px;
@@ -201,13 +229,12 @@ h2 {
     & .lastad {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         padding: 30px 0;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
-    & h2 {
-        width: 700px;
-    }
 
     & .lastadimage {
 
@@ -240,6 +267,7 @@ h2 {
 }
 
 .background7 {
+    & .contatos { 
     text-align: center;
 
     & .logocontato {
@@ -247,6 +275,7 @@ h2 {
         justify-content: center;
         padding: 50px 0;
         gap: 15px;
+        align-items: center;
 
         & .bannertexto {
             text-align: left;
@@ -258,11 +287,13 @@ h2 {
         }
     }
 
-    & .contatos {
+    & .contatostext {
         font-weight: 600;
         line-height: 40px;
         margin-bottom: 30px;
+
     }
+}
 }
 
 footer {
@@ -274,3 +305,86 @@ footer {
 span {
     color: #2f86d6;
 }
+
+
+
+/* Media query para dispositivos com largura de tela entre 601px e 900px */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+
+.background1 {
+    & .topo {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+
+        & .topoinfos {
+            font-size: 12px;
+            flex: 1 1 50px;
+            gap: 10px;
+            padding: 0;
+        }
+}
+}
+
+
+.background4 {
+    & .todasinfos {
+    display: flex;
+    flex-wrap: wrap;
+
+    & .subtituloinfos {
+        padding: 0;
+        text-align: center;
+        margin: 0 ;
+    }
+
+    & .infos1, .infos2 {
+        padding-bottom: 25px;
+    }
+}
+}
+
+h2 {
+    font-size: 25px;
+}
+
+.lastadinfo, .firstadinfo, .bannertext, .contatostext{
+        text-align: center;
+    }
+
+.contatostext {
+    font-size: 13px;
+    line-height: 0px;
+    margin: 0;
+
+    & p {
+        padding: 2px 0px;
+    }
+}
+
+.tabela {
+    width: 87vw;
+    overflow-x: auto;
+    margin: 0 auto;
+}
+
+
+footer {
+    font-size: 15px;
+}
+
+}
+
+
+
+
+
+
+
+
