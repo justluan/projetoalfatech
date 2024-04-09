@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 0;
+}
+
 h2 {
     font-size: 30px;
 }
@@ -314,6 +318,10 @@ span {
         font-size: 18px;
     }
 
+    ::-webkit-scrollbar {
+        width: 1;
+    }
+
 
 .background1 {
     & .topo {
@@ -372,6 +380,11 @@ h2 {
     width: 87vw;
     overflow-x: auto;
     margin: 0 auto;
+}
+
+.contatos p {
+    line-height: 15px;
+    padding: 10px;
 }
 
 
